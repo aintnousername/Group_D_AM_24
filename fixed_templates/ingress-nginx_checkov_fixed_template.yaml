@@ -651,10 +651,10 @@ spec:
         resources:
           requests:
             memory: 90Mi
-            cpu: null
+            cpu: 250m
           limits:
             memory: 90Mi
-            cpu: null
+            cpu: 250m
       restartPolicy: OnFailure
       serviceAccountName: release-name-ingress-nginx-admission
       nodeSelector:
