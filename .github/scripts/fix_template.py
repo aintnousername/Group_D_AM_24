@@ -523,6 +523,9 @@ def set_cpu_limit(obj: dict, value="250m"):
         if "cpu" in obj["resources"]["requests"]:
             value = obj["resources"]["requests"]["cpu"]
 
+    if not value:
+        value = "250m"
+
     # If resources is set, but limits is not, Set it
     if "limits" not in obj["resources"] or \
         obj["resources"]["limits"] is None:
@@ -562,6 +565,9 @@ def set_cpu_request(obj: dict, value="250m"):
             obj["resources"]["limits"]:
         if "cpu" in obj["resources"]["limits"]:
             value = obj["resources"]["limits"]["cpu"]
+
+    if not value:
+        value = "250m"
 
     # If resources is set, but requests is not, Set it
     if "requests" not in obj["resources"] or \
