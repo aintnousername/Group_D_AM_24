@@ -1,4 +1,4 @@
-# Group D - Trento Experiments
+# Group D - Amsterdam Experiments
 
 This repository contains the Helm Charts and GitHub Actions that Group D will analyze.
 
